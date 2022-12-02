@@ -29,10 +29,10 @@
             <div class="quick-action-section">
                 <h2 class="quick-action">Швидкий доступ</h2>
                 <ul class="quick-action-list">
-                    <li><button type="button" class="quick-action-button">
+                    <li> <button type="button" class="quick-action-button"><a href="./master.html">
                         Замовити майстра
                         <svg class="svg2"><use href="symbol-defs.svg#icon-arrow"></use></svg>
-                    </button></li>
+                    </a></button></li>
                     <li><button type="button" class="quick-action-button">
                         Витрати
                         <svg class="svg2"><use href="symbol-defs.svg#icon-arrow"></use></svg>
@@ -59,12 +59,17 @@
     </svg></button>
 </section>
 
+
+<!-- Mob_menu -->
 <div class="mob-menu is-hidden">
     <div class="container">
         <div class="mob-menu-top">
-    <button type="button" class="mob-menu_close-btn">
-        <svg class="mob-menu-close_icon" width="18" height="18">
-            <use href="symbol-defs.svg#icon-cross"></use>
+            <div class="main-logo">
+                <a href="./index.html"><svg class="svg-logo"><use href="symbol-defs.svg#icon-logo"></use></svg></a>
+                </div>
+    <button type="button" class="close-btn">
+        <svg class="close-btn__icon" width="18" height="18">
+            <use href="./symbol-defs_close.svg#icon-crosss"></use>
         </svg>
     </button>
     <div class="quick-action-section">
@@ -95,13 +100,16 @@
 </div>
 </div>
 
-<div class="backdrop is-hidden" data-modal>
-    <div class="modal">
-        <button data-modal-close class="close-btn">
-            <svg width="18px" height="18px" class="close-btn__icon">
-                <use href="./images/symbol-defs-close.svg#icon-close"></use>
-            </svg>
-        </button>
+    <div class="modal is-hidden" data-modal>
+        <div class="mob-menu-top">
+            <div class="main-logo">
+                <a href="./index.html"><svg class="svg-logo"><use href="symbol-defs.svg#icon-logo"></use></svg></a>
+                </div>
+    <button data-modal-close type="button" class="close-btn">
+        <svg class="close-btn__icon" width="18" height="18">
+            <use href="./symbol-defs_close.svg#icon-crosss"></use>
+        </svg>
+    </button>
         <h2 class="modal__title">Вхід</h2>
         <form class="modal__form">
             <label class="modal__label-field">
@@ -113,7 +121,6 @@
                 <input class="modal__input" type="password" name="password">
             <button class="modal-btn" type="submit">Вхід</button>
         </div>
-</div>
 <!-- <div class="pretty p-switch p-fill">
     <input type="checkbox" />
     <div class="state">

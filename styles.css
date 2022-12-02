@@ -17,17 +17,29 @@ body{
 ul{
     list-style: none;
 }
-
-.menu{ 
-    width: 100%;
-    height: 64px;
-    background: #101010;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    bottom:0;
+a{
+  text-decoration: none;
+  color:bisque;
 }
+
+.main-logo{
+  margin: 10px 10px 0 10px;
+}
+.svg-logo{
+  width:60px;
+  height:60px;
+}
+.notification{
+  text-decoration:none;
+  float:right;
+  width:50px;
+  text-align:center;
+}
+.value{
+  font-weight:bold;
+  color:blanchedalmond;
+}
+
 
 .balance{
     background-color:rgb(80, 80, 80);
@@ -47,13 +59,8 @@ ul{
     font-family: 'Montserrat', sans-serif;
     border-radius: 4px;
     margin-top:15px;
-    
 }
 
-.value{
-    font-weight:bold;
-    color:blanchedalmond;
-}
 .heading{
     color:whitesmoke;
     font-weight: 500;
@@ -92,9 +99,7 @@ ul{
     margin-top:50px;
 }
 
-.main-logo{
-    margin: 10px 10px 0 10px;
-}
+
 
 /* SVG */
 .svg{
@@ -110,22 +115,23 @@ ul{
     float:right;
 }
 
-.svg-logo{
-    width:60px;
-    height:60px;
-}
-.notification{
-    text-decoration:none;
-    float:right;
-    width:50px;
-    text-align:center;
+/* -------Mob_menu---------- */
+.menu{ 
+  width: 100%;
+  height: 64px;
+  background: #101010;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom:0;
 }
 .menu-btn{
     background:none;
     border:none;
 }
 
-.backdrop {
+/* .backdrop {
     @media screen and (max-width: 767px) {
       padding: 93px 15px;
     }
@@ -140,16 +146,23 @@ ul{
     overflow-y: scroll;
   
     transition: visibility 250ms var (--timing-function), opacity 250ms var (--timing-function);
-  }
+  } */
   
-  .backdrop.is-hidden {
+  .modal.is-hidden {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
   }
   
-  .modal {
-    position: absolute;
+  .modal {position: fixed;
+	  background-color: var(--textWhiteColor);
+	  width: 393px;
+	  height: 600px;
+	  top: 0;
+	  left: 0;
+	  z-index: 1;
+
+    /* position: absolute;
     width:393px;
     height: 808px;
     padding: 40px;
@@ -161,12 +174,12 @@ ul{
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
   
-    transition: scale 250ms var (--timing-function);
+    transition: scale 250ms var (--timing-function); */
   }
   
-  .backdrop.is-hidden .modal {
+  /* .backdrop.is-hidden .modal {
     transform: scale(0);
-  }
+  } */
   
   .close-btn {
     position: absolute;
@@ -177,7 +190,8 @@ ul{
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: #fff;
+    background-color: bisque;
+    fill: #101010;
     right: 8px;
     top: 8px;
   }
@@ -204,7 +218,7 @@ ul{
     line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--titleTextColor);
+    color: bisque;
     margin: 0;
     padding: 0;
   
@@ -232,14 +246,22 @@ ul{
   .modal__field-name {
     font-size: 12px;
     margin-bottom: 4px;
+    color: bisque;
   }
   /* ------------------------------- */
   .modal__input {
-    width: 370px;
-    height: 40px;
+    width: 230px;
+    height: 30px;
+    background-color: bisque;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border-color 250ms var(--timing-function);
+}
+.modal-btn {
+  margin-top: 10px;
+  width: 150px;
+  background-color: bisque;
+  border-radius: 10px;
 }
 
 	.mob-menu_close-btn {
@@ -249,8 +271,12 @@ ul{
 	  padding: 0;
 	  margin-left: auto;
 	  border: none;
-	  background: var(--textWhiteColor);
+	  background: bisque;
 	}
+
+  .mob-menu-close_icon {
+fill:rgba(245, 244, 250, 1)
+  }
 	
     .mob-menu-btn_icon, .mob-menu-close_icon:hover, :focus {
       fill: var(--accentColor);
@@ -268,6 +294,11 @@ ul{
 	  left: 0;
 	  z-index: 1;
 	}
+  .mob-menu.is-hidden {
+	  opacity: 0;
+	  pointer-events: none;
+	  visibility: hidden;
+	}
 
 	.container {
 	    display: flex;
@@ -278,7 +309,7 @@ ul{
 	    margin: 0;
 	  }
 
-	.mob-menu_item {
+	/* .mob-menu_item {
 	  
 	  font-weight: 400;
 	  font-size: 40px;
@@ -336,11 +367,7 @@ ul{
 	  letter-spacing: 0.02em;
 	
 	  color: #2196f3;
-	}
+	} */
 	
-	.mob-menu.is-hidden {
-	  opacity: 0;
-	  pointer-events: none;
-	  visibility: hidden;
-	}
+	
 	
