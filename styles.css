@@ -13,6 +13,7 @@ body{
     background-color: #353535;
     font-family: 'Montserrat', sans-serif;
     margin:0;
+    width: 393px;
 }
 ul{
     list-style: none;
@@ -118,6 +119,7 @@ a{
 /* -------Mob_menu---------- */
 .menu{ 
   width: 100%;
+  max-width: 393px;
   height: 64px;
   background: #101010;
   display: flex;
@@ -125,6 +127,7 @@ a{
   align-items: center;
   position: fixed;
   bottom:0;
+  z-index: 2;
 }
 .menu-btn{
     background:none;
