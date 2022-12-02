@@ -1,0 +1,346 @@
+    :root{
+    --primaryTextColor: rgba(117, 117, 117, 1);
+	--titleTextColor: rgba(33, 33, 33, 1);
+	--accentColor: rgba(33, 150, 243, 1);
+	--secondaryColor: rgba(245, 244, 250, 1);
+	--textWhiteColor: rgb(44, 44, 44);
+	--primaryFont: Montserrat, sans-serif;
+	--secondaryFont: Roboto, sans-serif;
+	--timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+body{
+    background-color: #353535;
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+}
+ul{
+    list-style: none;
+}
+
+.menu{ 
+    width: 100%;
+    height: 64px;
+    background: #101010;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom:0;
+}
+
+.balance{
+    background-color:rgb(80, 80, 80);
+    border-radius:5px;
+    width:25%;
+    padding:5px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-top:30px;
+    margin-left: 15px;
+}
+
+.action{
+    background-color:burlywood;
+    border:none;
+    font-weight:500;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 4px;
+    margin-top:15px;
+    
+}
+
+.value{
+    font-weight:bold;
+    color:blanchedalmond;
+}
+.heading{
+    color:whitesmoke;
+    font-weight: 500;
+}
+
+.quick-action{
+    font-weight:500;
+    color:azure;
+    
+    margin-bottom:0;
+    font-weight:700;
+    padding-left: 15px;
+    font-size: 150%;
+}
+
+.quick-action-button{
+    font-size:130%;
+    background: none;
+    border:none;
+    font-family:Roboto;
+    font-weight:400;
+    width:100%;
+    height:70px;
+    border-bottom:1px solid white;
+    color:bisque;
+    text-align:left;
+    padding-left:15px;
+    
+}
+.quick-action-list{
+    padding: 0px;
+    margin:0;
+}
+
+.quick-action-section{
+    margin-top:50px;
+}
+
+.main-logo{
+    margin: 10px 10px 0 10px;
+}
+
+/* SVG */
+.svg{
+    width:32px;
+    height:32px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.svg2{
+    width:20px;
+    height:20px;
+    float:right;
+}
+
+.svg-logo{
+    width:60px;
+    height:60px;
+}
+.notification{
+    text-decoration:none;
+    float:right;
+    width:50px;
+    text-align:center;
+}
+.menu-btn{
+    background:none;
+    border:none;
+}
+
+.backdrop {
+    @media screen and (max-width: 767px) {
+      padding: 93px 15px;
+    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    visibility: visible;
+  
+    overflow-y: scroll;
+  
+    transition: visibility 250ms var (--timing-function), opacity 250ms var (--timing-function);
+  }
+  
+  .backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  
+  .modal {
+    position: absolute;
+    width:393px;
+    height: 808px;
+    padding: 40px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);  
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  
+    transition: scale 250ms var (--timing-function);
+  }
+  
+  .backdrop.is-hidden .modal {
+    transform: scale(0);
+  }
+  
+  .close-btn {
+    position: absolute;
+    color: rgba(0, 0, 0, 1);
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    right: 8px;
+    top: 8px;
+  }
+  
+  .close-btn__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    width: 18px;
+    height: 18px;
+  
+    transition: fill 250ms var(--timing-function);}
+  
+    .close-btn:hover, .close-btn:focus {
+    fill: var(--accentColor);
+    cursor: pointer;
+    }
+  
+  
+  .modal__title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--titleTextColor);
+    margin: 0;
+    padding: 0;
+  
+    margin-bottom: 12px;
+  }
+  
+  /* --------modal form----------- */
+  
+  .modal__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .modal__label-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .modal__label-field:not(:first-child) {
+    margin-top: 10px;
+  }
+  
+  .modal__field-name {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  /* ------------------------------- */
+  .modal__input {
+    width: 370px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color 250ms var(--timing-function);
+}
+
+	.mob-menu_close-btn {
+	  display: block;
+	  width: 40px;
+	  height: 40px;
+	  padding: 0;
+	  margin-left: auto;
+	  border: none;
+	  background: var(--textWhiteColor);
+	}
+	
+    .mob-menu-btn_icon, .mob-menu-close_icon:hover, :focus {
+      fill: var(--accentColor);
+      outline: none;
+      cursor: pointer;
+      transition: fill 250ms var(--timing-function);
+    }
+	
+	.mob-menu {
+	  position: fixed;
+	  background-color: var(--textWhiteColor);
+	  width: 393px;
+	  height: 600px;
+	  top: 0;
+	  left: 0;
+	  z-index: 1;
+	}
+
+	.container {
+	    display: flex;
+	    height: 100%;
+	    flex-direction: column;
+	    justify-content: space-between;
+	    padding: 0;
+	    margin: 0;
+	  }
+
+	.mob-menu_item {
+	  
+	  font-weight: 400;
+	  font-size: 40px;
+	  line-height: 47px;
+	  letter-spacing: 0.02em;
+	}
+    .mob-menu_item:not(:last-child) {
+	    margin-bottom: 32px;
+	  }
+	
+	.mob-menu_item-link {
+	  color: var(--titleTextColor);
+	}
+
+    .mob-menu_item-link:active {
+	    color: var(--accentColor);
+	  }
+	
+	.mob-menu_tel {
+	  margin-bottom: 32px;
+	}
+	
+	.mob-menu_mail {
+	  margin-bottom: 64px;
+	}
+	
+	.mob-menu_tel-link {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 500;
+	  font-size: 34px;
+	  line-height: 40px;
+	  letter-spacing: 0.02em;
+	
+	  color: #2196f3;
+	}
+	
+	.mob-menu_mail-link {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 500;
+	  font-size: 24px;
+	  line-height: 28px;
+	  letter-spacing: 0.02em;
+	
+	  color: #757575;
+	}
+	
+	.mob-menu_soc-link {
+	  font-family: 'Roboto';
+	  font-style: normal;
+	  font-weight: 500;
+	  font-size: 18px;
+	  line-height: 22px;
+	  letter-spacing: 0.02em;
+	
+	  color: #2196f3;
+	}
+	
+	.mob-menu.is-hidden {
+	  opacity: 0;
+	  pointer-events: none;
+	  visibility: hidden;
+	}
+	

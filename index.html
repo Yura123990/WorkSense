@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
+    <title>WorkSense</title>
+</head>
+<body>
+    <section class="main">
+        <div class="main-logo">
+            <svg class="svg-logo"><use href="symbol-defs.svg#icon-logo"></use></svg>
+            <a href="" class="notification"><svg class="svg"><use href="symbol-defs.svg#icon-notification"></use></svg>
+            <span class="value">0</span></a>
+        </div>
+
+        <div class="main-body">
+            <div class="balance">
+                <span class="heading">Баланс:</span>
+                <span class="value">0.00₴</span>
+                <button type="button" class="action">Поповнити</button>
+            </div>
+            <div class="quick-action-section">
+                <h2 class="quick-action">Швидкий доступ</h2>
+                <ul class="quick-action-list">
+                    <li><button type="button" class="quick-action-button">
+                        Замовити майстра
+                        <svg class="svg2"><use href="symbol-defs.svg#icon-arrow"></use></svg>
+                    </button></li>
+                    <li><button type="button" class="quick-action-button">
+                        Витрати
+                        <svg class="svg2"><use href="symbol-defs.svg#icon-arrow"></use></svg>
+                    </button></li>
+                    <li><button type="button" class="quick-action-button">
+                        Техпідтримкa
+                        <svg class="svg2"><use href="symbol-defs.svg#icon-arrow"></use></svg>
+                    </button></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu">
+    <button type="button" class="menu-btn mob-menu-btn"><svg class="svg">
+        <use href="symbol-defs.svg#icon-hamburger"></use>
+    </svg></button>
+    <button type="button" class="menu-btn" data-modal-open><svg class="svg">
+        <use href="symbol-defs.svg#icon-account"></use>
+    </svg></button>
+    <button type="button" class="menu-btn"><svg class="svg">
+        <use href="symbol-defs.svg#icon-settings"></use>
+    </svg></button>
+</section>
+
+<div class="mob-menu is-hidden">
+    <div class="container">
+        <div class="mob-menu-top">
+    <button type="button" class="mob-menu_close-btn">
+        <svg class="mob-menu-close_icon" width="18" height="18">
+            <use href="symbol-defs.svg#icon-cross"></use>
+        </svg>
+    </button>
+    <div class="quick-action-section">
+        <ul class="quick-action-list">
+            <li><button type="button" class="quick-action-button">
+                Замовити майстра
+                <svg class="svg2"><use href="symbol-defs.svg#icon-arrow"></use></svg>
+            </button></li>
+            <li><button type="button" class="quick-action-button">
+                Бонусна програма
+                <svg class="svg2"><use href="symbol-defs.svg#icon-arrow"></use></svg>
+            </button></li>
+            <li><button type="button" class="quick-action-button">
+                Оплата
+                <svg class="svg2"><use href="symbol-defs.svg#icon-arrow"></use></svg>
+            </button></li>
+            <li><button type="button" class="quick-action-button">
+                Недавні виклики
+                <svg class="svg2"><use href="symbol-defs.svg#icon-arrow"></use></svg>
+            </button></li>
+            <li><button type="button" class="quick-action-button">
+                Про програму
+                <svg class="svg2"><use href="symbol-defs.svg#icon-arrow"></use></svg>
+            </button></li>
+        </ul>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button data-modal-close class="close-btn">
+            <svg width="18px" height="18px" class="close-btn__icon">
+                <use href="./images/symbol-defs-close.svg#icon-close"></use>
+            </svg>
+        </button>
+        <h2 class="modal__title">Вхід</h2>
+        <form class="modal__form">
+            <label class="modal__label-field">
+                <span class="modal__field-name">Телефон/ел. пошта</span>
+                <input class="modal__input" type="tel" name="tel">       
+            </label>
+            <label class="modal__label-field">
+                <span class="modal__field-name">Пароль</span>
+                <input class="modal__input" type="password" name="password">
+            <button class="modal-btn" type="submit">Вхід</button>
+        </div>
+</div>
+<!-- <div class="pretty p-switch p-fill">
+    <input type="checkbox" />
+    <div class="state">
+      <label>On</label>
+    </div>
+  </div> -->
+  <!-- <div class="pretty p-default p-curve">
+    <input type="checkbox" class="checkbox-input" />
+    <div class="state">
+      <label>Fill</label>
+    </div>
+  </div> -->
+
+<script src="./modal.js"></script>
+<script src="./menu.js"></script>
+</body>
+</html>
